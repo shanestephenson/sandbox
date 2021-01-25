@@ -1,24 +1,25 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route, Redirect, NavLink, Link} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, NavLink, Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 import './App.css';
-import Header from './components/UI/Header/Header';
-import Running from './containers/Running/Running';
-import Home from './containers/Home/Home';
+import About from './containers/About/About';
+import Projects from './containers/Projects/Projects';
 
 const app = props => (
   <BrowserRouter>
     <div className="App">
-      <Header />
-      <Button variant="contained" color="primary">Click Me</Button>
+      {/*<Button variant="contained" color="primary">Click Me</Button> */}  
+
       <ul>
-        <li><Link to="/running">Running</Link></li>
+        <li><NavLink to="/" activeStyle={{ color: 'red' }} >Shane Stephenson</NavLink></li>
+        <li><NavLink to="/about" activeStyle={{ color: 'red' }}>About</NavLink></li>
+        <li><NavLink to="/projects" activeStyle={{ color: 'red' }}>Projects</NavLink></li>
       </ul>
       <Switch>
-        <Route exact path="/running" component={Running} />
-        <Route exact path="/" component={Home} />
-        <Redirect from="/all-courses" to="/"/>
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route  path="/"/>
       </Switch>
     </div>
   </BrowserRouter>
