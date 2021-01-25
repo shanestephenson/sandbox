@@ -1,4 +1,6 @@
-.tags {
-  color: black;
-  font-size: 24px;
+.Link {
+  text-decoration: 'none' !important;
+  color: 'black';
+  font-size: '28px';
+  margin: '10px';
 }
