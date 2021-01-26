@@ -13,7 +13,7 @@ const app = props => {
     textDecoration: 'none',
     color: 'black',
     fontSize: '22px',
-    margin: '10px'
+    margin: '15px',
   };
 
   const activeLinkStyle = {
